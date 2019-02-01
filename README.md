@@ -1,2 +1,2 @@
 Progetto Programmazione I - Parthenope
-![Alt text](http://Users/robertovecchio/Documents/Documenti - MacBook Pro di Roberto/Progetto C - Programmmazione I/Progetto Programmazione I - Parthenope/images/Pr_Vecchio_Roberto.png)
+![Alt text](http://Users/robertovecchio/Documents/Documenti-MacBookProdiRoberto/ProgettoC-ProgrammmazioneI/ProgettoProgrammazioneI-Parthenope/images/Pr_Vecchio_Roberto.png)
