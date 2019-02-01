@@ -1,4 +1,4 @@
-![alt text](https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwjU5KjwmZvgAhWMGewKHbuiAPAQjRx6BAgBEAU&url=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCNBZALzU97MuIKSMS_gnO6A&psig=AOvVaw3HZdiaut3HDVUYSmiIxNyl&ust=1549133428375036)
+![alt text](https://yt3.ggpht.com/a-/AAuE7mDDOnzgmdBQJ_cL9WE76wmX_pSJRmJSTdUROQ=s900-mo-c-c0xffffffff-rj-k-no)
 #Progetto Programmazione I - Parthenope
 ![Screenshot](./images/page_1.png)
 ![Screenshot](./images/page_2.png)
