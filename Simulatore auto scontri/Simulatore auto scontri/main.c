@@ -85,13 +85,16 @@ int main(int argc, const char * argv[]) {
     
     printGrid(grid);
     //isDamaged(cars);
-    
-    while (!isDamaged(cars)) {
+    bool isdan = false;
+    while (!isdan) {
         
         for (i = 0; i < 4; i++) {
             turn += 1;
             random_num =  nrand();
             dir_cars = assignenum(random_num, cars[i].right_percent, cars[i].left_percent, cars[i].forwars_percent);
+            
+            printf("premi 1 per passare al prossimo turno: ");
+            scanf("%d",&choice);
             
             switch (dir_cars) {
                 case avanti:
@@ -102,6 +105,7 @@ int main(int argc, const char * argv[]) {
                         cars[i].position_x -= 1;
                         grid[cars[i].position_x][cars[i].position_y] = cars[i].symbol;
                         printf("La %s con simbolo %c si è spostata in avanti in [%d][%d]\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
+                        isdan = isDamaged(cars);
                         
                     }else{
                         printf("La %s con simbolo %c èrimasta ferma\n\n", cars[i].name, cars[i].symbol);
@@ -116,6 +120,7 @@ int main(int argc, const char * argv[]) {
                         cars[i].position_x += 1;
                         grid[cars[i].position_x][cars[i].position_y] = cars[i].symbol;
                         printf("La %s con simbolo %c si è spostata in indietro in [%d][%d]\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
+                        isdan = isDamaged(cars);
                         
                     }else{
                         printf("La %s con simbolo %c èrimasta ferma\n\n", cars[i].name, cars[i].symbol);
@@ -129,6 +134,7 @@ int main(int argc, const char * argv[]) {
                         cars[i].position_y += 1;
                         grid[cars[i].position_x][cars[i].position_y] = cars[i].symbol;
                         printf("La %s con simbolo %c si è spostata a destra in [%d][%d]\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
+                        isdan = isDamaged(cars);
                         
                     }else{
                         printf("La %s con simbolo %c èrimasta ferma\n\n", cars[i].name, cars[i].symbol);
@@ -143,6 +149,7 @@ int main(int argc, const char * argv[]) {
                         cars[i].position_y -= 1;
                         grid[cars[i].position_x][cars[i].position_y] = cars[i].symbol;
                         printf("La %s con simbolo %c si è spostata sinistra in [%d][%d]\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
+                        isdan = isDamaged(cars);
                         
                     }else{
                         printf("La %s con simbolo %c èrimasta ferma\n\n", cars[i].name, cars[i].symbol);
@@ -151,12 +158,11 @@ int main(int argc, const char * argv[]) {
                     break;
                     
                 default:
+                    printf("dentro default");
                     return 0;
                     
             
             }
-            printf("premi 1 per passare al prossimo turno: ");
-            scanf("%d",&choice);
         }
         printf("\n\n==========================================\n\n\n");
         printGrid(grid);
@@ -278,17 +284,16 @@ bool isDamaged(car_struct *cars){
     
     for (i = 0; i < N_CARS; i++) {
         for (j = 0; j < N_CARS; j++) {
-            if (i != j) {//macchina[i] != macchina[j]
+            if (i != j && cars[i].position_x == cars[j].position_x && cars[i].position_y == cars[j].position_y) {//macchina[i] != macchina[j]
+                printf("la macchina con simbolo %c e l'altra con simbolo %c si sono scontrate nella posizione",cars[i].symbol,cars[j].symbol);
+                isDamaged = true;
+                return isDamaged;
                 //printf("confronto nella prima if\n");
                 //printf("confronto macchina[%d], con macchina[%d]\n", i,j);
-                if (cars[i].position_x == cars[j].position_x && cars[i].position_y == cars[j].position_y) {
-                    printf("la macchina con simbolo %c e l'altra con simbolo %c si sono scontrate nella posizione",cars[i].symbol,cars[j].symbol);
-                    isDamaged = true;
-                }
+                
             }
         }
     }
-    
     return isDamaged;
 }
 
