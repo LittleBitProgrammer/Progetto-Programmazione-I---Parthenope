@@ -11,8 +11,7 @@
 #define MAX_NAME_LENGHT 20
 
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
+#include "utilitylib.h"
 
 typedef enum { destra = 1, sinistra, avanti, indietro } direction;
 typedef enum { false, true} bool;
@@ -31,33 +30,31 @@ typedef struct car {
 }car_struct;
 
 /*inizializza la posizione delle auto*/
-void initCarPosition(char [8][8], car_struct *);              //va bene in car.h
+void initCarPosition(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *);            
 /*inizializza matrice*/
-void initMatrix(char[8][8]);
+void initCarMatrix(char[N_ROWS_COLUMNS][N_ROWS_COLUMNS]);
 /*ritorna la direzione dell'auto*/
-int returnDirection(int, int, int, int);
-/*ritorna numero randomico*/
-int nrand(void);
+int returnCarDirection(int, int, int, int);
 /*verifica lo scontro*/
-bool isClashed(car_struct *);                                 //va bene in car.h
+bool isClashed(car_struct *, int);
 /*verifico che non sia sul margine sinistro*/
-bool isNotOnLeftMargin(car_struct *, int);                    //va bene in car.h
+bool isNotOnLeftMargin(car_struct *, int);
 /*verifico che non sia sul margine destro*/
-bool isNotOnRightMargin(car_struct *, int);                   //va bene in car.h
+bool isNotOnRightMargin(car_struct *, int);
 /*verifico che sia sul margine superiore*/
-bool isNotOnTopMargin(car_struct *, int);                     //va bene in car.h
+bool isNotOnTopMargin(car_struct *, int);
 /*verifico che non sia sul margine inferiore*/
-bool isNotOnBottomMargin(car_struct *, int);                  //va bene in car.h
+bool isNotOnBottomMargin(car_struct *, int);
 /*cancello posizione precedente*/
-void eraseOldCarPosition(char [8][8], int, car_struct *);     //va bene in car.h
+void eraseOldCarPosition(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
 /*muovi la macchina a sinistra*/
-void moveToLeft(char [8][8], int, car_struct *);              //va bene in car.h
+void moveToLeft(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
 /*muovi la macchina a destra*/
-void moveToRight(char [8][8], int, car_struct *);             //va bene in car.h
+void moveToRight(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
 /*muovi la macchina in avanti*/
-void moveForward(char [8][8], int, car_struct *);             //va bene in car.h
+void moveForward(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
 /*muovi la macchina indietro*/
-void moveBack(char [8][8], int, car_struct *);                //va bene in car.h
+void moveBack(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
 
 
 #endif /* car_h */

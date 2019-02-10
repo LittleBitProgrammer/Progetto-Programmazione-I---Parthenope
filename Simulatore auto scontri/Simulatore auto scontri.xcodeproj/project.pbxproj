@@ -10,6 +10,7 @@
 		992164D5220D82E500D8D2B8 /* car.c in Sources */ = {isa = PBXBuildFile; fileRef = 992164D4220D82E500D8D2B8 /* car.c */; };
 		998C0C11220B8BA400C81A9C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 998C0C10220B8BA400C81A9C /* main.c */; };
 		998C0C1B220D76C300C81A9C /* grid.c in Sources */ = {isa = PBXBuildFile; fileRef = 998C0C1A220D76C300C81A9C /* grid.c */; };
+		99EE0B16220F0C2C002B7CD4 /* utilitylib.c in Sources */ = {isa = PBXBuildFile; fileRef = 99EE0B15220F0C2C002B7CD4 /* utilitylib.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		998C0C10220B8BA400C81A9C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		998C0C19220D76C300C81A9C /* grid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = grid.h; sourceTree = "<group>"; };
 		998C0C1A220D76C300C81A9C /* grid.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = grid.c; sourceTree = "<group>"; };
+		99EE0B14220F0C2C002B7CD4 /* utilitylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utilitylib.h; sourceTree = "<group>"; };
+		99EE0B15220F0C2C002B7CD4 /* utilitylib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utilitylib.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,7 @@
 				998C0C10220B8BA400C81A9C /* main.c */,
 				998C0C1A220D76C300C81A9C /* grid.c */,
 				992164D4220D82E500D8D2B8 /* car.c */,
+				99EE0B15220F0C2C002B7CD4 /* utilitylib.c */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -84,6 +88,7 @@
 			children = (
 				992164D3220D82E500D8D2B8 /* car.h */,
 				998C0C19220D76C300C81A9C /* grid.h */,
+				99EE0B14220F0C2C002B7CD4 /* utilitylib.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99EE0B16220F0C2C002B7CD4 /* utilitylib.c in Sources */,
 				992164D5220D82E500D8D2B8 /* car.c in Sources */,
 				998C0C11220B8BA400C81A9C /* main.c in Sources */,
 				998C0C1B220D76C300C81A9C /* grid.c in Sources */,

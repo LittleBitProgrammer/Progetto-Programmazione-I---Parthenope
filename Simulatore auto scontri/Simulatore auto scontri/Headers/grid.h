@@ -8,10 +8,9 @@
 
 #ifndef grid_h
 #define grid_h
-#define N_ROWS_COLUMNS 8
-#define N_CARS 4
 
 #include <stdio.h>
+#include "utilitylib.h"
 
 /*stampa intestazione griglia*/
 void printColumnNumbers(void);

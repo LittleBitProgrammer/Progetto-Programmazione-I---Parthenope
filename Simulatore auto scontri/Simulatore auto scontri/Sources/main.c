@@ -23,6 +23,7 @@
 #include <time.h>
 #include "../Headers/grid.h"
 #include "../Headers/car.h"
+#include "../Headers/utilitylib.h"
 
 car_struct cars[] = {
     {"dodge Coronet", 3, 0, 'X', 20, 10, 30, 40},
@@ -36,12 +37,13 @@ int main(int argc, const char * argv[]) {
     int i;
     int turn = 0;
     int random_num;
-    int choice;
+    char choice[10];
     char grid[8][8];
     bool isdan = false;
     direction dir_cars;
 
-    printf("\n\n                     ___\n                       _-_-  _/\\______\\__\n                    _-_-__  / ,-. -|-  ,-.`-.\n                       _-_- `( o )----( o )-'\n                              `-'      `-'\n");
+    printLogo();
+    
     printf("\n\n             Benvenuto nel Simulatore di auto scontri!\n");
     printf("<------------------------------------------------------------------------>\n");
     
@@ -55,7 +57,7 @@ int main(int argc, const char * argv[]) {
     
     printf("Di seguito una interfaccia grafica della griglia di partenza:\n\n");
     
-    initMatrix(grid);
+    initCarMatrix(grid);
     initCarPosition(grid,cars);
     
     printf("\n");//creo spazio dal bordo
@@ -67,13 +69,13 @@ int main(int argc, const char * argv[]) {
         
         turn += 1;
         
-        for (i = 0; i < 4; i++) {
+        for (i = 0; i < N_CARS && !isdan; i++) {
             
             random_num =  nrand();
-            dir_cars = returnDirection(random_num, cars[i].right_percent, cars[i].left_percent, cars[i].forwars_percent);
+            dir_cars = returnCarDirection(random_num, cars[i].right_percent, cars[i].left_percent, cars[i].forwars_percent);
             
             printf("\n\n\nPremi una lettera qualsiasi e poi enter per muovere la ----> %c: ", cars[i].symbol);
-            scanf("%d",&choice);
+            scanf("%s",choice);
             
             switch (dir_cars) {
                     
@@ -85,7 +87,7 @@ int main(int argc, const char * argv[]) {
                         moveForward(grid, i, cars);
                         
                         printf("La %s con simbolo %c si è spostata in avanti in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
-                        isdan = isClashed(cars);
+                        isdan = isClashed(cars, i);
                         
                     }else{
                         
@@ -104,7 +106,7 @@ int main(int argc, const char * argv[]) {
                         
                         printf("La %s con simbolo %c si è spostata in indietro in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
                         
-                        isdan = isClashed(cars);
+                        isdan = isClashed(cars, i);
                         
                     }else{
                         
@@ -123,7 +125,7 @@ int main(int argc, const char * argv[]) {
                         
                         printf("La %s con simbolo %c si è spostata a destra in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
                         
-                        isdan = isClashed(cars);
+                        isdan = isClashed(cars, i);
                         
                     }else{
                         
@@ -142,7 +144,7 @@ int main(int argc, const char * argv[]) {
                         
                         printf("La %s con simbolo %c si è spostata sinistra in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
                         
-                        isdan = isClashed(cars);
+                        isdan = isClashed(cars, i);
                         
                     }else{
                         
@@ -162,6 +164,6 @@ int main(int argc, const char * argv[]) {
         printGrid(grid);
         
     }
-    
+    printf("\n\nComplimenti le auto hanno resistito %d turni senza scontrarsi !\n\n", turn-1);
     return 0;
 }
