@@ -25,7 +25,6 @@ void initCarMatrix(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS]){
     }
 }
 
-/*correggere funzione*/
 int returnCarDirection( int random_num, int f_per, int s_per, int t_per){
     
     int first = f_per;
