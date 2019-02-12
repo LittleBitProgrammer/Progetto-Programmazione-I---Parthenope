@@ -58,24 +58,24 @@ bool isClashed(car_struct *cars, int index){
     return isDamaged;
 }
 
-bool isNotOnLeftMargin(car_struct *cars, int index){
-    return cars[index].position_y > 0;
+bool isNotOnLeftMargin(car_struct *cars){
+    return cars->position_y > 0;
 }
 
-bool isNotOnRightMargin(car_struct *cars, int index){
-    return cars[index].position_y < N_ROWS_COLUMNS-1;
+bool isNotOnRightMargin(car_struct *cars){
+    return cars->position_y < N_ROWS_COLUMNS-1;
 }
 
-bool isNotOnTopMargin(car_struct *cars, int index){
-    return cars[index].position_x > 0;
+bool isNotOnTopMargin(car_struct *cars){
+    return cars->position_x > 0;
 }
 
-bool isNotOnBottomMargin(car_struct *cars, int index){
-    return cars[index].position_x < N_ROWS_COLUMNS-1;
+bool isNotOnBottomMargin(car_struct *cars){
+    return cars->position_x < N_ROWS_COLUMNS-1;
 }
 
-void eraseOldCarPosition(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], int index, car_struct *cars){
-    matrix[cars[index].position_x][cars[index].position_y] = ' ';
+void eraseOldCarPosition(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *cars){
+    matrix[cars->position_x][cars->position_y] = ' ';
 }
 
 void moveToLeft(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], int index, car_struct *cars){

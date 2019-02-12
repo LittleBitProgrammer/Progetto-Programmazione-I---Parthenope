@@ -38,15 +38,15 @@ int returnCarDirection(int, int, int, int);
 /*verifica lo scontro*/
 bool isClashed(car_struct *, int);
 /*verifico che non sia sul margine sinistro*/
-bool isNotOnLeftMargin(car_struct *, int);
+bool isNotOnLeftMargin(car_struct *);
 /*verifico che non sia sul margine destro*/
-bool isNotOnRightMargin(car_struct *, int);
+bool isNotOnRightMargin(car_struct *);
 /*verifico che sia sul margine superiore*/
-bool isNotOnTopMargin(car_struct *, int);
+bool isNotOnTopMargin(car_struct *);
 /*verifico che non sia sul margine inferiore*/
-bool isNotOnBottomMargin(car_struct *, int);
+bool isNotOnBottomMargin(car_struct *);
 /*cancello posizione precedente*/
-void eraseOldCarPosition(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
+void eraseOldCarPosition(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *);
 /*muovi la macchina a sinistra*/
 void moveToLeft(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
 /*muovi la macchina a destra*/

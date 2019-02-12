@@ -81,9 +81,9 @@ int main(int argc, const char * argv[]) {
                     
                 case avanti:
                     
-                    if (isNotOnTopMargin(cars, i)) {
+                    if (isNotOnTopMargin(cars + i)) {
                         
-                        eraseOldCarPosition(grid, i,cars);
+                        eraseOldCarPosition(grid,cars + i);
                         moveForward(grid, i, cars);
                         
                         printf("La %s con simbolo %c si è spostata in avanti in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
@@ -99,9 +99,9 @@ int main(int argc, const char * argv[]) {
                     
                 case indietro:
                     
-                    if (isNotOnBottomMargin(cars, i)){
+                    if (isNotOnBottomMargin(cars + i)){
                         
-                        eraseOldCarPosition(grid, i, cars);
+                        eraseOldCarPosition(grid, cars + i);
                         moveBack(grid, i, cars);
                         
                         printf("La %s con simbolo %c si è spostata in indietro in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
@@ -118,9 +118,9 @@ int main(int argc, const char * argv[]) {
                     
                 case destra:
                     
-                    if (isNotOnRightMargin(cars, i)){
+                    if (isNotOnRightMargin(cars + i)){
                         
-                        eraseOldCarPosition(grid, i, cars);
+                        eraseOldCarPosition(grid,cars + i);
                         moveToRight(grid, i, cars);
                         
                         printf("La %s con simbolo %c si è spostata a destra in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
@@ -137,9 +137,9 @@ int main(int argc, const char * argv[]) {
                     
                 case sinistra:
                     
-                    if (isNotOnLeftMargin(cars, i)) {
+                    if (isNotOnLeftMargin(cars + i)) {
                         
-                        eraseOldCarPosition(grid, i, cars);
+                        eraseOldCarPosition(grid,cars + i);
                         moveToLeft(grid, i ,cars);
                         
                         printf("La %s con simbolo %c si è spostata sinistra in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
