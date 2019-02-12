@@ -84,7 +84,7 @@ int main(int argc, const char * argv[]) {
                     if (isNotOnTopMargin(cars + i)) {
                         
                         eraseOldCarPosition(grid,cars + i);
-                        moveForward(grid, i, cars);
+                        moveForward(grid,cars + i);
                         
                         printf("La %s con simbolo %c si è spostata in avanti in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
                         isdan = isClashed(cars, i);
@@ -102,7 +102,7 @@ int main(int argc, const char * argv[]) {
                     if (isNotOnBottomMargin(cars + i)){
                         
                         eraseOldCarPosition(grid, cars + i);
-                        moveBack(grid, i, cars);
+                        moveBack(grid,cars + i);
                         
                         printf("La %s con simbolo %c si è spostata in indietro in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
                         
@@ -121,7 +121,7 @@ int main(int argc, const char * argv[]) {
                     if (isNotOnRightMargin(cars + i)){
                         
                         eraseOldCarPosition(grid,cars + i);
-                        moveToRight(grid, i, cars);
+                        moveToRight(grid,cars + i);
                         
                         printf("La %s con simbolo %c si è spostata a destra in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
                         
@@ -140,7 +140,7 @@ int main(int argc, const char * argv[]) {
                     if (isNotOnLeftMargin(cars + i)) {
                         
                         eraseOldCarPosition(grid,cars + i);
-                        moveToLeft(grid, i ,cars);
+                        moveToLeft(grid,cars + i);
                         
                         printf("La %s con simbolo %c si è spostata sinistra in |%d|%d|\n", cars[i].name, cars[i].symbol,cars[i].position_x+1, cars[i].position_y+1);
                         

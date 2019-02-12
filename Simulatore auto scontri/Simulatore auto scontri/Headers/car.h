@@ -48,13 +48,13 @@ bool isNotOnBottomMargin(car_struct *);
 /*cancello posizione precedente*/
 void eraseOldCarPosition(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *);
 /*muovi la macchina a sinistra*/
-void moveToLeft(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
+void moveToLeft(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *);
 /*muovi la macchina a destra*/
-void moveToRight(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
+void moveToRight(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *);
 /*muovi la macchina in avanti*/
-void moveForward(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
+void moveForward(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *);
 /*muovi la macchina indietro*/
-void moveBack(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], int, car_struct *);
+void moveBack(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *);
 
 
 #endif /* car_h */

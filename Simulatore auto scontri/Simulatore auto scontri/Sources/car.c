@@ -78,22 +78,22 @@ void eraseOldCarPosition(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct
     matrix[cars->position_x][cars->position_y] = ' ';
 }
 
-void moveToLeft(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], int index, car_struct *cars){
-    cars[index].position_y -= 1;
-    matrix[cars[index].position_x][cars[index].position_y] = cars[index].symbol;
+void moveToLeft(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *cars){
+    cars->position_y -= 1;
+    matrix[cars->position_x][cars->position_y] = cars->symbol;
 }
 /*muovi la macchina a destra*/
-void moveToRight(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], int index, car_struct *cars){
-    cars[index].position_y += 1;
-    matrix[cars[index].position_x][cars[index].position_y] = cars[index].symbol;
+void moveToRight(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *cars){
+    cars->position_y += 1;
+    matrix[cars->position_x][cars->position_y] = cars->symbol;
 }
 /*muovi la macchina in avanti*/
-void moveForward(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], int index, car_struct *cars){
-    cars[index].position_x -= 1;
-    matrix[cars[index].position_x][cars[index].position_y] = cars[index].symbol;
+void moveForward(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *cars){
+    cars->position_x -= 1;
+    matrix[cars->position_x][cars->position_y] = cars->symbol;
 }
 /*muovi la macchina indietro*/
-void moveBack(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], int index, car_struct *cars){
-    cars[index].position_x += 1;
-    matrix[cars[index].position_x][cars[index].position_y] = cars[index].symbol;
+void moveBack(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *cars){
+    cars->position_x += 1;
+    matrix[cars->position_x][cars->position_y] = cars->symbol;
 }
