@@ -6,6 +6,23 @@
 //  Copyright © 2019 Roberto Vecchio. All rights reserved.
 //
 
+                                                                /* - Scopo della libreria - */
+                                                           /*-----------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+                                                                -----------------------------
+                                                        |---->  |           car.h           |  <----|
+                                                                -----------------------------
+ 
+ La libreria in questione nasce con lo scopo di semplificare le operazioni, ripetute che le auto devono svolgere finchè quest'ultime non collidono, infatti anche il
+ controllo, della collisione è affidato ad una funzione presente in libreria, ma anche operazioni come movimento e controllo sulla posizioni sono presenti nel seguente
+ file
+ 
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
                                                                 /* - definisco la libreria - */
                                                             /*-----------------------------------*/
 
