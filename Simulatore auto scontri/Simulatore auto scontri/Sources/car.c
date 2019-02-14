@@ -7,7 +7,6 @@
 //
 
 #include "car.h"
-#include "grid.h"
 
 void initCarPosition(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *cars){
     matrix[3][0] = cars[0].symbol;

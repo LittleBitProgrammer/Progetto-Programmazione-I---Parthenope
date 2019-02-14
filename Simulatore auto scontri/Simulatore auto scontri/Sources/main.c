@@ -8,6 +8,7 @@
 
                                                /* Roberto Vecchio - I anno informatica - mat. 0124001871 */
 
+                                         /* https://github.com/robertove93/Progetto-Programmazione-I---Parthenope*/
 
                                                                 /* - Traccia progetto - */
                                                          /*-----------------------------------*/
@@ -48,7 +49,7 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
- Il programma in questione, scritto in linguaggio C, ha lo scopo di simulare le probabilità di scontro di 4 auto partendo al centro dei corrispettivi margini di
+ Il programma in questione, scritto in linguaggio C, ha lo scopo di simulare le probabilità di scontro di 4 auto partendo dal centro dei corrispettivi margini di
  una griglia 8x8, ad ogni turno, ad ogni auto viene chiesto un input da utente per permettere a quest'ultimo di tenere traccia degli spostamenti avvenuti e della
  loro corrispettiva direzione, è prevista, inoltre, un'interfaccia utente che permette di avere feedback sugli effettivi spostamenti avvenuti. Il software tiene
  traccia del tempo, sotto forma di turni, mostrando ad ogni ripetizione quanto tempo le auto hanno resisitito senza subire scontri. Le direzioni di spostamento
@@ -185,7 +186,7 @@ int main(int argc, const char * argv[]) {
     
     printf("__________________________________________________________________________\n\n");
     
-    printf("Di seguito una interfaccia grafica della griglia di partenza:\n\n");
+    printf("Di seguito un' interfaccia grafica della griglia di partenza:\n\n");
     
     /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
      
