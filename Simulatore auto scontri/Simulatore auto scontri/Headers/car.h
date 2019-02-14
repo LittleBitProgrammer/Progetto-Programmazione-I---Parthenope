@@ -45,7 +45,7 @@ void initCarPosition(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *);
 /* - inizializza matrice - */
 void initCarMatrix(char[N_ROWS_COLUMNS][N_ROWS_COLUMNS]);
 /* - ritorna la direzione dell'auto - */
-int returnCarDirection(int, int, int, int);
+int returnCarDirection(int, car_struct *);
 /* - verifica lo scontro - */
 bool isClashed(car_struct *, int);
 /* - verifico che non sia sul margine sinistro - */

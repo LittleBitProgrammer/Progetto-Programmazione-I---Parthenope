@@ -24,17 +24,17 @@ void initCarMatrix(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS]){
     }
 }
 
-int returnCarDirection( int random_num, int f_per, int s_per, int t_per){
+int returnCarDirection( int random_num, car_struct *car){
     
-    int first = f_per;
-    int second = f_per +s_per;
-    int third = f_per +s_per +t_per;
+    int first_percent = car->right_percent;
+    int second_percent = first_percent + car->left_percent;
+    int third_percent = second_percent + car->forwars_percent;
     
-    if (random_num < first) {
+    if (random_num < first_percent) {
         return 1;
-    }else if(random_num >= first && random_num< second ){
+    }else if(random_num >= first_percent && random_num< second_percent ){
         return 2;
-    }else if(random_num >= second && random_num< third ){
+    }else if(random_num >= second_percent && random_num< third_percent ){
         return 3;
     }else{
         return 4;

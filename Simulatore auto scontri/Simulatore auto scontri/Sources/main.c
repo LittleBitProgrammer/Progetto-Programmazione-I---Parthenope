@@ -255,7 +255,7 @@ int main(int argc, const char * argv[]) {
              
              -------------------------------------------------------------------------------------------------------------------------------------------------------------*/
             
-            dir_cars = returnCarDirection(random_num, cars[i].right_percent, cars[i].left_percent, cars[i].forwars_percent);
+            dir_cars = returnCarDirection(random_num, cars +i);
             
             //Per ogni auto viene richiesto un input per permettere all'utente di prendere nota degli spostamenti avvenuti.
             printf("\n\n\nPremi una lettera qualsiasi e poi enter per muovere la ----> %c: ", cars[i].symbol);
