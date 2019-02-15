@@ -64,7 +64,7 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
- Includo le librerie standard utili per lo sviluppo del file main.c è sta inclusa quindi:
+ Includo le librerie standard utili per lo sviluppo del file main.c, quindi:
  
  - stdio.h : "standard input-output header" che contiene definizioni di macro, costanti e dichiarazioni di funzioni e tipi usati per gestire le varie operazioni di
    input/output. In particolare è stata inclusa allo scopo di utilizzare le funzioni : printf e scanf.
@@ -101,7 +101,7 @@
  Inizializzo un array monodimensionale del tipo car_struct (definito in car.h) utile per rappresentare il concetto di auto nel contesto del software in questione e
  per applicare su di essi diverse operazioni, come spostamento, controllo di collisione ecc..
  
- Per semplificare la lettura del codice nel main.c di seguito le variabili che definiscono una singola struttura car_struc :
+ Per semplificare la lettura del codice nel main.c di seguito le variabili che definiscono una singola struttura car_struct :
  
  {
    - nome auto
@@ -198,11 +198,14 @@ int main(int argc, const char * argv[]) {
     
     /* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
      
-     Inizializzo la posizine auto in interfaccia utente secondo le modalità definite dalla funzione in car.h. (spiegazione dettagliata nell'header file di appartenenza)
+     Inizializzo la posizine auto in interfaccia utente
      
      --------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
     
-    initCarPosition(grid,cars);
+    grid[3][0] = cars[0].symbol;
+    grid[0][3] = cars[1].symbol;
+    grid[3][7] = cars[2].symbol;
+    grid[7][3] = cars[3].symbol;
     
     printf("\n ");
     
@@ -263,7 +266,7 @@ int main(int argc, const char * argv[]) {
             
             /* ------------------------------------------------------------------------------------------------------------------------------------------------------------
              
-             In questo punto l'auto dovrà decidere la serie di operazioni da svolgere in funzione della direzione di spostamento pre-determinata, quindi viene sfruttato
+             A questo punto l'auto dovrà decidere la serie di operazioni da svolgere in funzione della direzione di spostamento pre-determinata, quindi viene sfruttato
              uno switch case per gestire le varie casistiche in funzione del valore assunto da dir_cars
              
              -------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -413,7 +416,7 @@ int main(int argc, const char * argv[]) {
         
     }
     
-    //stampa quanti turni è durata la collisione senza scontri
+    //stampa quanti turni è durata la simulazione senza collisioni
     printf("\n\nComplimenti le auto hanno resistito %d turni senza scontrarsi !\n\n", turn-1);
     return 0;
 }

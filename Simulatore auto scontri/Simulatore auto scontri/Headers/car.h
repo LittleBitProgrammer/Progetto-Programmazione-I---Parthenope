@@ -42,13 +42,13 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
- Includo le librerie standard e non utili per lo sviluppo di alcune funzioni, sono state incluse quindi le librerie :
+ Includo le librerie standard e non, utili per lo sviluppo di alcune funzioni, sono state incluse quindi le librerie :
  
  - stdio.h : "standard input-output header" che contiene definizioni di macro, costanti e dichiarazioni di funzioni e tipi usati per gestire le varie operazioni di
              input/output. In particolare è stata inclusa allo scopo di utilizzare le funzioni : printf e scanf.
  
  - utilitylib.h : librieria composta da costanti e funzioni di utilità generica, in particolare vengono utilizzate le costanti N_CARS e N_ROWS_COLUMNS in diverse
-                  funzioni
+                  funzioni.
  
  -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -125,8 +125,6 @@ typedef struct car {
  -------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
-/* - inizializza la posizione delle auto - */
-void initCarPosition(char [N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *);
 /* - inizializza matrice - */
 void initCarMatrix(char[N_ROWS_COLUMNS][N_ROWS_COLUMNS]);
 /* - ritorna la direzione dell'auto - */
