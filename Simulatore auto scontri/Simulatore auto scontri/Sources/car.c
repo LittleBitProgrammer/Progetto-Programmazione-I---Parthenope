@@ -25,7 +25,7 @@
 
                                                                /* - Inclusione header file - */
                                                             /*-----------------------------------*/
-#include "car.h"
+#include "../Headers/car.h"
 
 
                                                                      /* - Funzioni - */
@@ -62,7 +62,7 @@ void initCarMatrix(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS]){
  * nome:        returnCarDirection
  
  * input:       - numero randomico, necessario per calcolare la direzione di spostamento
-                - array monodimensionale di car_struct per ricavare le percentuali di spostamento in una determinata direzione
+                - array monodimensionale di car_struct come puntatore per ricavare le percentuali di spostamento in una determinata direzione
  
  * output:      ritorna un numero intero che sarà successivamente corrisposto a un enum di direction
  
@@ -100,7 +100,7 @@ int returnCarDirection( int random_num, car_struct *car){
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------
  * nome:        isClashed
  
- * input:       - array monodimensionale di car_struct per ricavare le variabili position_x e position_y
+ * input:       - array monodimensionale di car_struct come puntatore per ricavare le variabili position_x e position_y
                 - indice di tipo intero dell'auto che deve confrontare la propria posizione con quella delle restanti
  
  * output:      ritorna un valore booleano (0 per false e 1 per true), che verifica se le auto si sono scontrate
@@ -135,7 +135,7 @@ bool isClashed(car_struct *cars, int index){
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------
  * nome:        isNotOnLeftMargin
  
- * input:       - array monodimensionale di car_struct per ricavare la variabile position_y
+ * input:       - array monodimensionale di car_struct come puntatore per ricavare la variabile position_y
  
  * output:      ritorna un valore booleano (0 per false e 1 per true), che verifica se l'auto si trova sul margine sinistro della griglia
  
@@ -152,7 +152,7 @@ bool isNotOnLeftMargin(car_struct *cars){
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------
  * nome:        isNotOnRightMargin
  
- * input:       - array monodimensionale di car_struct per ricavare la variabile position_y
+ * input:       - array monodimensionale di car_struct come puntatore per ricavare la variabile position_y
  
  * output:      ritorna un valore booleano (0 per false e 1 per true), che verifica se l'auto si trova sul margine destro della griglia
  
@@ -169,7 +169,7 @@ bool isNotOnRightMargin(car_struct *cars){
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------
  * nome:        isNotOnTopMargin
  
- * input:       - array monodimensionale di car_struct per ricavare la variabile position_x
+ * input:       - array monodimensionale di car_struct come puntatore per ricavare la variabile position_x
  
  * output:      ritorna un valore booleano (0 per false e 1 per true), che verifica se l'auto si trova sul margine superiore della griglia
  
@@ -186,7 +186,7 @@ bool isNotOnTopMargin(car_struct *cars){
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------
  * nome:        isNotOnBottomMargin
  
- * input:       - array monodimensionale di car_struct per ricavare la variabile position_x
+ * input:       - array monodimensionale di car_struct come puntatore per ricavare la variabile position_x
  
  * output:      ritorna un valore booleano (0 per false e 1 per true), che verifica se l'auto si trova sul margine inferiore della griglia
  
@@ -203,7 +203,7 @@ bool isNotOnBottomMargin(car_struct *cars){
  * nome:        eraseOldCarPosition
  
  * input:       - array bidimensionale con grandezza  8 x 8
-                - array monodimensionale di car_struct per ricavare la variabile position_x e postion_y
+                - array monodimensionale di car_struct come puntatore per ricavare la variabile position_x e postion_y
  
  * output:      assegna un carattere di spaziatura alla vecchia posizione sulla griglia
  
@@ -224,7 +224,7 @@ void eraseOldCarPosition(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct
  * nome:        moveToleft
  
  * input:       - array bidimensionale con grandezza massima 8 x 8, grandezza definita dalla costante N_ROWS_COLUMNS
-                - array monodimensionale di car_struct per ricavare la variabile position_x e postion_y
+                - array monodimensionale di car_struct come puntatore per ricavare la variabile position_x e postion_y
  
  * output:      simula lo spostamento auto nella direzione di sinistra assegnando quindi il simbolo nella nuova cordinata x,y
  
@@ -244,7 +244,7 @@ void moveToLeft(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *cars){
  * nome:        moveToRight
  
  * input:       - array bidimensionale con grandezza massima 8 x 8, grandezza definita dalla costante N_ROWS_COLUMNS
-                - array monodimensionale di car_struct per ricavare la variabile position_x e postion_y
+                - array monodimensionale di car_struct come puntatore per ricavare la variabile position_x e postion_y
  
  * output:      simula lo spostamento auto nella direzione di destra assegnando quindi il simbolo nella nuova cordinata x,y
  
@@ -263,7 +263,7 @@ void moveToRight(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *cars){
  * nome:        moveForward
  
  * input:       - array bidimensionale con grandezza massima 8 x 8, grandezza definita dalla costante N_ROWS_COLUMNS
-                - array monodimensionale di car_struct per ricavare la variabile position_x e postion_y
+                - array monodimensionale di car_struct come puntatore per ricavare la variabile position_x e postion_y
  
  * output:      simula lo spostamento auto nella direzione avanti assegnando quindi il simbolo nella nuova cordinata x,y
  
@@ -282,7 +282,7 @@ void moveForward(char matrix[N_ROWS_COLUMNS][N_ROWS_COLUMNS], car_struct *cars){
  * nome:        moveBack
  
  * input:       - array bidimensionale con grandezza massima 8 x 8, grandezza definita dalla costante N_ROWS_COLUMNS
-                - array monodimensionale di car_struct per ricavare la variabile position_x e postion_y
+                - array monodimensionale di car_struct come puntatore per ricavare la variabile position_x e postion_y
  
  * output:      simula lo spostamento auto nella direzione indietro assegnando quindi il simbolo nella nuova cordinata x,y
  
